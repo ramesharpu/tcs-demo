@@ -18,4 +18,8 @@ public class TcsDemoApplication {
 		return "<h1> Hello There!!! Welcome to my project :) </h1>";
 	}
 
+	@GetMapping("/inbox")
+	public String inbox() {
+		return "<h1> This is from inbox module </h1>";
+	}
 }

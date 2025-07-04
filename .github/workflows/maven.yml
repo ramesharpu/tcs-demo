@@ -24,11 +24,6 @@ jobs:
         with:
           name: my-maven-artifact
           path: target/*.jar
-
-  create-docker-iamge:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ramesharpu/tcs-demo:$(date +%s)
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ramesharpu/tcs-demo:$(date +%s)

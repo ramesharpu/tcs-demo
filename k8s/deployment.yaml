@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcs-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tcs-demo
+  template:
+    metadata:
+      labels:
+        app: tcs-demo
+    spec:
+      containers:
+        - name: tcs-demo
+          image: vignesh9417/tcs-demo:latest
+          ports:
+            - containerPort: 8080
